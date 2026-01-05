@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoldMind — Protein Insight Studio</title>
+
+    <!-- Tailwind via CDN to keep the project simple (no config needed) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Inter", "Roboto", "Helvetica", "Arial"],
+              mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New"]
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      :root{
+  --bg0:#f8fafc;
+  --bg1:#eef2ff;
+  --card:#ffffff;
+  --stroke: rgba(15, 23, 42, .10);
+  --text: rgba(15, 23, 42, .92);
+  --muted: rgba(51, 65, 85, .78);
+  --good: #16a34a;
+  --warn: #d97706;
+  --bad:  #e11d48;
+}
+body{
+  background:
+    radial-gradient(900px 500px at 20% 10%, rgba(99, 102, 241, .18), transparent 55%),
+    radial-gradient(900px 500px at 80% 20%, rgba(56, 189, 248, .14), transparent 55%),
+    radial-gradient(900px 500px at 70% 90%, rgba(16, 185, 129, .10), transparent 55%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  color: var(--text);
+}
+/* nice scrollbars */
+      ::-webkit-scrollbar{ width:10px; height:10px; }
+      ::-webkit-scrollbar-track{ background: rgba(15, 23, 42, .6); }
+      ::-webkit-scrollbar-thumb{ background: rgba(148, 163, 184, .25); border-radius: 999px; }
+      ::-webkit-scrollbar-thumb:hover{ background: rgba(148, 163, 184, .40); }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
